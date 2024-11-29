@@ -18,12 +18,12 @@
   transform: scale(1.08);
 }
 .row-posterLarge {
-  max-height: 250px;
+  max-height: 350px;
 }
 .row-posterLarge:hover {
   transform: scale(1.09);
 }
-.row{
-    margin-left: 20px;
-    color: white;
+.row {
+  margin-left: 20px;
+  color: white;
 }

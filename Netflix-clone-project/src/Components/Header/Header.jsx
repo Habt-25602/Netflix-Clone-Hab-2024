@@ -15,7 +15,7 @@ function Header() {
             <li>
               <img src={Logo} alt="" width="100" />
             </li>
-            <li>Home</li>
+            <li><a href="">Home</a> </li>
             <li>TV Shows</li>
             <li>Movies</li>
             <li>Latest</li>

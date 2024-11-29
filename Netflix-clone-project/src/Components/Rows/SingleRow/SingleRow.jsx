@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../SingleRow/SingleRow.css";
 import axios from "../../../utils/axios";
-import movietrailer from "movie-trailer";
 import Youtube from "react-youtube";
 import movieTrailer from "movie-trailer";
-import { width } from "@mui/system";
 
 function SingleRow({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
@@ -12,25 +10,18 @@ function SingleRow({ title, fetchUrl, isLargeRow }) {
   const [trailerUrl, setTrailerUrl] = useState("");
 
   useEffect(() => {
-    let isMounted = true; // Track if component is mounted
-
     const fetchMovies = async () => {
       try {
         const request = await axios.get(fetchUrl);
-        if (isMounted) {
-          // Ensure results is an array
-          setMovies(request.data.results || []);
-        }
+
+        // Ensure results is an array
+        setMovies(request.data.results || []);
       } catch (error) {
         console.error("Error fetching movies:", error);
       }
     };
 
     fetchMovies();
-
-    return () => {
-      isMounted = false; // Cleanup function sets isMounted to false
-    };
   }, [fetchUrl]); // Include fetchUrl as a dependency
 
   const handleClick = (movie) => {
@@ -51,7 +42,7 @@ function SingleRow({ title, fetchUrl, isLargeRow }) {
 
   const opts = {
     height: "390",
-    width: '100%',
+    width: "100%",
     playerVars: {
       autoplay: 1,
     },

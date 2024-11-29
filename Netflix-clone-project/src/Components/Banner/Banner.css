@@ -19,7 +19,7 @@ button {
   padding-top: 20%;
 }
 .banner_buttons {
-  margin-top: 20px;
+  display: flex;
 
   background-color: transparent;
 }
@@ -30,33 +30,43 @@ button {
 .banner_button {
   background-color: transparent;
   border: none;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 .play {
   padding-left: 30px;
   background-color: white;
   display: flex;
+  margin-right: 40px;
 
   align-items: center;
 }
-.banner_buttons{
-display: inline;
+.list {
+  color: white !important;
+}
+.list:hover {
+  background-color: black !important;
+}
+.banner_buttons {
+  display: inline flex;
 }
 .play:hover {
   color: black;
-  margin-right: 40px;
+
   background-color: rgb(138, 138, 138);
 }
 .icon {
- 
-
   margin-right: 20px;
 }
-.banner_description{
-    width:550px
-    
-    
+.banner_description {
+  width: 550px;
 }
-.banner_fade{
-    height: 40vh;
-    background-image: linear-gradient(180deg,transparent,rgb(37,37,0.91),#111);
+.banner_fade {
+  height: 40vh;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgb(37, 37, 0.91),
+    #111
+  );
 }
